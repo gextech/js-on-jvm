@@ -1,5 +1,5 @@
 # Javascript en la JVM 8.0
- ---
+
 Proyecto de ejemplo para correr JS en la JVM utilizando los engines de **nashorn**, **rhino** y el framework **avatar-js**.
 
 
@@ -16,13 +16,12 @@ Proyecto de ejemplo para correr JS en la JVM utilizando los engines de **nashorn
 * Nashorn    : El engine de JS por defecto de la JVM 8.
 * Rhino.js   : Engine de JS desarrollado por Mozilla.
 
-
 Para correr el proyecto:
 
 1. Ejecutar npm en la carpeta /js (esto es para obtener las dependencias necesarias de los ejemplos).
 4. Correr grunt en la carpeta /js (aplica browserify).
 2. Usar SDK 8
-3. En la raiz del proyecto es ejecutar:
+3. En la raiz del proyecto es ejecutar (esto es para exponer los bindigs que requiere avatar-js):
     * Para osx:
        ```bash
         export DYLD_LIBRARY_PATH=$(pwd)/lib:$DYLD_LIBRARY_PATH
@@ -33,8 +32,11 @@ Para correr el proyecto:
         export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
       ```
 
-      Esto es para exponer los bindigs que requiere avatar-js
-4. gradle test
+4. Ejecutar: 
+     
+    ```bash
+       gradle test
+    ```
 
 
 Nota: Solo lo se hicieron pruebas en osx, gradle no tiene soporte completo para JVM 8.
