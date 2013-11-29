@@ -1,0 +1,23 @@
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin:'application'
+mainClassName = "gee.NodeWrapper"
+
+sourceCompatibility=1.8
+targetCompatibility=1.8
+
+test.scanForTestClasses = false
+
+repositories {
+    mavenCentral()
+  maven {
+    url "http://repo.sindica.to/nexus/content/repositories/thirdparty/"
+  }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.0'
+    compile 'org.mozilla:rhino:1.7R4'
+    compile 'net.java.avatar.js:avatar-js:1.8.0-ea-b116'
+    testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+}
