@@ -1,3 +1,6 @@
 avatar-groovy.iml
 .gradle/
 .idea/
+js/node_modules
+build
+js-on-jvm.iml

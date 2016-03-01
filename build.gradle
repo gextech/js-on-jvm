@@ -1,23 +1,26 @@
 apply plugin: 'groovy'
 apply plugin: 'java'
-apply plugin:'application'
+apply plugin: 'application'
 mainClassName = "gee.NodeWrapper"
 
-sourceCompatibility=1.8
-targetCompatibility=1.8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 test.scanForTestClasses = false
 
 repositories {
-    mavenCentral()
+  mavenCentral()
   maven {
-    url "http://repo.sindica.to/nexus/content/repositories/thirdparty/"
+    url "https://maven.java.net/content/repositories/snapshots/"
   }
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.2.0'
-    compile 'org.mozilla:rhino:1.7R4'
-    compile 'net.java.avatar.js:avatar-js:1.8.0-ea-b116'
-    testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+  compile 'org.codehaus.groovy:groovy-all:2.4.6'
+  compile 'org.mozilla:rhino:1.7.7.1'
+  compile 'com.oracle:avatar-js:0.10.32-SNAPSHOT'
+  testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+//  compile 'com.oracle:libavatar-js-win-x64:0.10.32-SNAPSHOT'
+//  compile 'com.oracle:libavatar-js-macosx-x64:0.10.32-SNAPSHOT'
+//  compile 'com.oracle:libavatar-js-linux-x64:0.10.32-SNAPSHOT'
 }

@@ -15,7 +15,7 @@ class JsRunnerBrowserifySpec extends  Specification {
     String fileContents = new File(System.getProperty("user.dir") + "/js/generated/main.js").text
     println(fileContents)
 
-    def test = """var fat = function(arg1){
+    def test = """;var fat = function(arg1){
                   Animal = require("animal");
                   animal = new Animal();
                   return animal.move(arg1);

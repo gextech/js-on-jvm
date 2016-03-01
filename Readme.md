@@ -8,11 +8,11 @@ Proyecto de ejemplo para correr JS en la JVM utilizando los engines de **nashorn
  **JsRunnerBrowserifySpec:** Ejecuta un archivo definido con commonjs, utilizando una transformación de browserify,
  en los engines nashorn y rhino.
 
-  **TestNodeWrapper:** Ejecuta un script en avatar-js.
+ **TestNodeWrapper:** Ejecuta un script en avatar-js.
 
 
 
-* Avatar-js  : Es una implementación de node para la JVM, utiliza el engine de nashorn.
+* Avatar.js  : Es una implementación de node para la JVM, utiliza el engine de nashorn.
 * Nashorn    : El engine de JS por defecto de la JVM 8.
 * Rhino.js   : Engine de JS desarrollado por Mozilla.
 
@@ -32,10 +32,14 @@ Para correr el proyecto:
         export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
       ```
 
-4. Ejecutar: 
-     
+4. Ejecutar:
+
     ```bash
-       gradle test
+      cd js
+      npm install
+      grunt
+      cd ..
+      gradle test
     ```
 
 
